@@ -1,0 +1,40 @@
+Your complete website is ready. Here are the three files:
+
+
+
+
+
+## What's included
+
+**Design** — Dark black background with electric-blue neon glows, glassmorphism cards, animated hero particles on canvas, floating glow orbs, flickering neon text, a spinning orbital graphic in the About section, and scroll-reveal animations. Fully mobile-first responsive, with a circular clip-path hamburger menu on phones.
+
+**Navigation** — SENSU hexagonal logo, all 6 links, glowing ORDER NOW button, smooth scrolling, active-link highlighting as you scroll.
+
+**Sections** — Hero, Services (Video Editing / Editing Resources / Premium Apps, with a disclaimer that app services aren't officially affiliated with developers), Pricing (all 8 items in LKR, "POPULAR" badge on Colour Pack), Portfolio (placeholder slots + before/after comparison, clearly labelled as samples), About, Reviews (clearly labelled sample placeholders, no fake testimonials), Contact (WhatsApp/TikTok/Email buttons to official destinations), and the footer with your exact copyright text.
+
+**Order system** — Every ORDER button opens the modal with the selected service and price pre-filled. It validates name, Sri Lankan WhatsApp number (e.g. 0701234567), service, requirements, and optional reference link — showing inline error messages. On submit, it builds a formatted order message and opens `wa.me/94704175769` (Sri Lanka code 94, leading 0 dropped). The form clearly states the order is **not confirmed until you accept it**, and nothing is stored or faked.
+
+## Running it locally
+
+Put all three files in one folder, then either:
+- **Double-click `index.html`** — it opens in your browser and works fully offline (WhatsApp links just need internet), or
+- Run a local server: `python -m http.server 8000` in that folder, then visit `http://localhost:8000`.
+
+## Publishing free online
+
+**Netlify Drop (easiest, ~2 minutes):**
+1. Go to app.netlify.com/drop
+2. Drag your folder onto the page — done. You get a free URL like `sensu-editing-store.netlify.app`.
+
+**GitHub Pages:** create a repository, upload the three files, then in Settings → Pages, select the `main` branch and save. Your site appears at `username.github.io/repo-name`.
+
+**Cloudflare Pages / Vercel** work the same way — connect the repo or drag-and-drop the folder.
+
+## Customising later
+
+- **Prices/names:** edit each `<article class="price-card">` in `index.html`, and update the matching entry in the `PRICE_MAP` object at the top of `script.js` so the modal shows the right price.
+- **Services:** copy any `<article class="service-card">` block to add one; delete to remove.
+- **Portfolio:** replace the placeholder `<div class="thumb">` blocks with `<video controls>` or `<img>` tags.
+- **WhatsApp number:** change `BUSINESS_WHATSAPP` at the top of `script.js` (one place only).
+
+One small note: I added an `assets/og-image.jpg` reference in the social-media metadata — that file is optional; you can create a simple 1200×630 banner and place it in an `assets` folder, or delete those two meta lines if you prefer.
